@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1 {
+	background-color: #59A849;	/*para navegadores que no reconocen el degradado*/
+	background-image: linear-gradient(#FFFFFF,#F3FFF2);
+	background-image: -webkit-linear-gradient(#FFFFFF,#F3FFF2);
+	background-image: -moz-linear-gradient(#FFFFFF,#F3FFF2);
+	background-image: -o-linear-gradient(#FFFFFF,#F3FFF2);
+	background-image: -ms-linear-gradient(#FFFFFF,#F3FFF2);
+
+	box-shadow: 0px 5px #93C90E;	
+	-webkit-box-shadow: 0px 5px #93C90E;
+	-moz-box-shadow: 0px 5px #93C90E;
+	-o-box-shadow: 0px 5px #93C90E;
+	-ms-box-shadow: 0px 5px #93C90E;
+	
+    height: 40px;
+	line-height: 40px;
+	
+	overflow: hidden;
+	
+	color: 93C90E;
+}
+
+td.Valor {
+	text-align: center;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  /*border-radius: 10px;*/
+  padding: 5px;
+}
+
+/* tomado de https://www.macgrafic.com/graficos-de-barras-con-cssbar-graphs-with-css/ */
+/* Código de barras simmple */
+.grafico {
+position: relative; /* IE is dumb */
+width: 200px;
+border: 1px solid #B1D632;
+padding: 2px;
+}
+.grafico .barra {
+display: block;
+position: relative;
+background: #B1D632;
+text-align: center;
+color: #333;
+height: 2em;
+line-height: 2em;
+}
+.grafico .barra span {
+position: absolute; left: 1em;
+}
+
+/* Código de barras complejo */
+dl {
+margin: 0;
+padding: 0;
+}
+dt {
+position: relative; /* IE is dumb */
+clear: both;
+display: block;
+float: left;
+width: 104px;
+height: 20px;
+line-height: 20px;
+margin-right: 17px;
+font-size: .75em;
+text-align: right;
+}
+dd {
+position: relative; /* IE is dumb */
+display: block;
+float: left;
+width: 197px;
+height: 20px;
+margin: 0 0 15px;
+background: url("g_colorbar.jpg");
+}
+* html dd { float: none; }
+/* IE is dumb; Quick IE hack,
+apply favorite filter methods for
+wider browser compatibility */
+dd div {
+position: relative;
+background: url("g_colorbar2.jpg");
+height: 20px;
+width: 75%;
+text-align:right;
+}
+dd div strong {
+position: absolute;
+right: -5px;
+top: -2px;
+display: block;
+background: url("g_marker.gif");
+height: 24px;
+width: 9px;
+text-align: left;
+text-indent: -9999px;
+overflow: hidden;
+}
+.cuartiles {
+background: url("cuartiles.jpg");
+height: 36px;
+width: 197px;
+text-align: left;
+}
+	

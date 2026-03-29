@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Foro colaborativo</title>
+<link href='estilos.css' rel='stylesheet' type='text/css' />
+<script>
+
+function window_onload() {
+	var IdUsuario;
+	
+	IdUsuario=ObtieneParametro('IdUsuario');
+	//alert(IdUsuario);
+	if (IdUsuario === undefined)
+		document.getElementById("txtUsuario").innerHTML = "No ha indicado ningún usuario válido";
+	else {
+		//document.getElementById("txtUsuario").innerHTML = "Uusario " + IdUsuario;
+		//document.getElementById("fUsuario").value = IdUsuario;
+		document.location="Usuario" + IdUsuario + ".html";
+	}
+}
+
+function ObtieneParametro(sParam) {
+    var sPageURL;
+	var sURLVariables;
+	var i;
+	var sParameterName;
+	
+    sPageURL = window.location.search.substring(1);
+	sURLVariables = sPageURL.split('&');
+	for (i = 0; i < sURLVariables.length; i++) {
+		sParameterName = sURLVariables[i].split('=');
+		if (sParameterName[0] == sParam) 
+			{
+            return( sParameterName[1]);
+			}		
+	}
+}
+
+function Vamos() {
+	//alert(document.getElementById("fUsuario").value);
+	document.location="Usuario" + document.getElementById("fUsuario").value + ".html";
+}
+
+</script>
+
+</head>
+<body onLoad="window_onload()" >
+<h1>Proyecto foro colaborativo</h1>
+<h2>Consultar indicadores personales</h2>
+<p id="txtUsuario"></p>
+<form id="MiForm">
+	<label>Usuario:</label>
+	<input type="text" id="fUsuario" name="fUsuario"><br>
+</form>
+	<button onclick="Vamos()">Pinche para ver sus resultados</button>	
+</body>
+</html>
